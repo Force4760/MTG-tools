@@ -3,6 +3,8 @@
   box-sizing: border-box;
   padding: none;
   margin: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor:pointer;
 }
 
 :root {
