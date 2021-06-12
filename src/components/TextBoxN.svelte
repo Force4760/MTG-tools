@@ -1,11 +1,13 @@
 <script>
   export let value = "";
+  export let placeholder = "Name";
+  export let max = "20";
 </script>
 
 <div class="searchbx">
   <div class="field">
     <span class="" aria-hidden="true" />
-    <input type="number" placeholder="Name" maxlength="20" bind:value />
+    <input type="number" {placeholder} maxlength={max} bind:value />
   </div>
 </div>
 

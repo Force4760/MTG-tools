@@ -122,6 +122,7 @@
     z-index: -2;
   }
   .value {
+    z-index: -1;
     font-size: 5rem;
     position: absolute;
     top: 50%;

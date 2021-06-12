@@ -67,5 +67,6 @@
     max-width: 90%;
     max-height: 90%;
     align-items: center;
+    z-index: -2;
   }
 </style>

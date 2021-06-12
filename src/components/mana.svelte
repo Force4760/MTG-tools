@@ -64,6 +64,7 @@
   }
   .result {
     position: absolute;
+    z-index: -1;
     top: 10%;
     left: 50%;
     font-size: 4rem;

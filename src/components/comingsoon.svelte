@@ -85,10 +85,4 @@
     width: 20%;
     margin: auto;
   }
-  .shadow {
-    -webkit-filter: drop-shadow(-3px -3px 6px var(--top-shadow))
-      drop-shadow(3px 3px 6px var(--bottom-shadow));
-    filter: drop-shadow(-3px -3px 6px var(--top-shadow))
-      drop-shadow(3px 3px 6px var(--bottom-shadow));
-  }
 </style>

@@ -136,7 +136,7 @@
     width: 100%;
     height: 100%;
     background: rgb(15, 105, 165);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
   }

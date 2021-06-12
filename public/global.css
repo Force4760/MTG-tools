@@ -4,7 +4,7 @@
   padding: none;
   margin: none;
   -webkit-tap-highlight-color: transparent;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 :root {
@@ -12,6 +12,13 @@
   --bottom-shadow: rgb(24, 71, 93);
   --text-main: rgb(200, 200, 200);
   --text-second: rgb(200, 200, 200);
+}
+
+.shadow {
+  -webkit-filter: drop-shadow(-3px -3px 6px var(--top-shadow))
+    drop-shadow(3px 3px 6px var(--bottom-shadow));
+  filter: drop-shadow(-3px -3px 6px var(--top-shadow))
+    drop-shadow(3px 3px 6px var(--bottom-shadow));
 }
 
 html {
@@ -77,4 +84,18 @@ button:not(:disabled):active {
 
 button:focus {
   border-color: #666;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.value {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
