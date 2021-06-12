@@ -69,5 +69,6 @@
     left: 50%;
     font-size: 4rem;
     transform: translate(-50%, -50%);
+    z-index: -1;
   }
 </style>
