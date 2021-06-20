@@ -5,9 +5,10 @@
   import CS from "./components/comingsoon.svelte";
   import Mana from "./pages/manaPage.svelte";
   import Playing from "./pages/Playing.svelte";
+  import Search from "./pages/search.svelte";
   import Footer from "./components/Footer.svelte";
   let game = {
-    pages: [false, false, false, false, false, false, true],
+    pages: [false, false, false, false, true],
     mana: {
       W: 0,
       U: 0,
@@ -38,12 +39,8 @@
   {:else if game.pages[2]}
     <Mana bind:game />
   {:else if game.pages[3]}
-    <CS />
+    <Search />
   {:else if game.pages[4]}
-    <CS />
-  {:else if game.pages[5]}
-    <CS />
-  {:else if game.pages[6]}
     <StartG bind:game />
   {/if}
 </div>

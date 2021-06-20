@@ -12,9 +12,7 @@
     ["Player 1", true, true, true, true],
     ["Player 2", true, true, true, true],
   ];
-  let lives = [10, 20, 30, 40, 50];
-  $: life = Math.floor((bar[0] * (lives.length - 1)) / (bar[1] * 0.8));
-  let bar = [120, 450];
+  let life = 20;
   function changeValue(value, delta, min, max, players) {
     let final = value + delta;
 
@@ -64,7 +62,7 @@
   }
 
   function st(players) {
-    game.players = createMultiple(players, lives[life]);
+    game.players = createMultiple(players, life);
     game.starting = true;
     show = false;
     setTimeout(() => {
@@ -81,7 +79,7 @@
 
 <Modal bind:show={game.starting} />
 {#if show}
-  <Slider bind:left={bar[0]} bind:size={bar[1]} bind:value={lives[life]} />
+  <Slider bind:value={life} />
   <div class="cards">
     {#each players as play (play)}
       <PlayerCard bind:checks={play} />

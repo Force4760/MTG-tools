@@ -58,8 +58,8 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
   }
-  .up:hover,
-  .down:hover {
+  .up:active,
+  .down:active {
     background-color: rgba(10, 10, 10, 0.1);
   }
   .result {

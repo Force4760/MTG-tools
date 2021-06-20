@@ -17,7 +17,7 @@
       <Toggle bind:value={checks[2]} label="Energy" />
     </div>
     <div class="w">
-      <Toggle bind:value={checks[3]} label="Experience" />
+      <Toggle bind:value={checks[3]} label="Exp" />
     </div>
     <div class="w">
       <Toggle bind:value={checks[4]} label="Tax" />
@@ -48,7 +48,7 @@
     width: 90%;
     margin: auto;
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }

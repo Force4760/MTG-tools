@@ -17,7 +17,7 @@
   }
   function reset() {
     game = {
-      pages: [false, false, false, false, false, false, true],
+      pages: [false, false, false, false, true],
       mana: {
         W: 0,
         U: 0,
@@ -83,27 +83,11 @@
     />
     <Btn
       width="90%"
-      label="Archenemy"
-      font="1.5rem"
-      marginTop="none"
-      margin="auto"
-      fun={() => changePage(3)}
-    />
-    <Btn
-      width="90%"
-      label="Planechase"
-      font="1.5rem"
-      marginTop="none"
-      margin="auto"
-      fun={() => changePage(4)}
-    />
-    <Btn
-      width="90%"
       label="Search"
       font="1.5rem"
       marginTop="none"
       margin="auto"
-      fun={() => changePage(5)}
+      fun={() => changePage(3)}
     />
     <Btn
       width="90%"
@@ -128,7 +112,7 @@
   }
   @media (min-width: 1000px) {
     nav {
-      max-width: 450px;
+      max-width: 900px;
     }
   }
   .out {

@@ -1,8 +1,7 @@
 <script>
+  import Toggle from "./Toggle2.svelte";
   import { slide } from "svelte/transition";
-  export let values = {
-    props: [["images/heart.svg", 10][("images/heart.svg", 20)]],
-  };
+  export let values = {};
   let index = 0;
 
   function changeValue(value, delta) {
@@ -55,6 +54,9 @@
   <p class="name">{values.name}</p>
   <img src={values.props[index][0]} alt="of the value" />
   <div class="value">{values.props[index][1]}</div>
+  {#if values.monarch}
+    <div class=" light monarch" />
+  {/if}
   <div
     class="add change"
     on:click={() =>
@@ -65,43 +67,67 @@
     on:click={() =>
       (values.props[index][1] = changeValueMin(values.props[index][1], -1, 0))}
   />
-  {#if values.props.length > 1}
-    <div
-      class="prev change"
-      on:click={() =>
-        (index = changeValueWrap(index, -1, values.props.length - 1, 0))}
+
+  <div
+    class="prev change"
+    on:click={() =>
+      (index = changeValueWrap(index, -1, values.props.length - 1, 0))}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      ><path
+        fill="rgb(200, 200, 200)"
+        d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+      /></svg
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        ><path
-          fill="rgb(200, 200, 200)"
-          d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
-        /></svg
-      >
-    </div>
-    <div
-      class="next change"
-      on:click={() =>
-        (index = changeValueWrap(index, 1, values.props.length - 1, 0))}
+  </div>
+  <div
+    class="next change"
+    on:click={() =>
+      (index = changeValueWrap(index, 1, values.props.length - 1, 0))}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      ><path
+        fill="rgb(200, 200, 200)"
+        d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
+      /></svg
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        ><path
-          fill="rgb(200, 200, 200)"
-          d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"
-        /></svg
-      >
-    </div>
-  {/if}
+  </div>
+  <div class="toggle">
+    <Toggle label="Monarch" size="0.85rem" bind:value={values.monarch} />
+  </div>
 </div>
 
 <style>
+  .light {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    filter: blur(5px);
+    opacity: 0.8;
+    transition: 1s linear;
+    background: transparent;
+  }
+  .monarch {
+    top: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(229, 17, 21, 1) 0%,
+      rgb(255, 30, 30) 30%,
+      rgb(255, 60, 60) 47%,
+      rgb(255, 30, 30) 71%,
+      rgba(229, 17, 21, 1) 100%
+    );
+  }
+
   p.name {
     position: absolute;
     top: 5%;
@@ -155,6 +181,7 @@
     box-shadow: -3px -3px 10px 5px var(--top-shadow),
       3px 3px 10px 5px var(--bottom-shadow);
     transform: 2s;
+    overflow: hidden;
   }
   .prev {
     position: absolute;
@@ -190,8 +217,18 @@
 
     color: var(--text-main);
   }
-  .change:hover {
+  .change:active {
     background-color: rgba(10, 10, 10, 0.1);
+  }
+
+  .toggle {
+    position: absolute;
+    bottom: 2%;
+    left: 4%;
+    z-index: 10;
+    display: flex;
+
+    justify-content: space-between;
   }
 
   @media (max-width: 600px) {

@@ -1,11 +1,14 @@
 <script>
   export let value = "";
+  export let placeholder = "Name";
+  export let max = "20";
+  export let margin = "1rem";
 </script>
 
-<div class="searchbx">
+<div class="searchbx" style="margin-top: {margin};margin-bottom:{margin};">
   <div class="field">
     <span class="" aria-hidden="true" />
-    <input type="text" placeholder="Name" maxlength="20" bind:value />
+    <input type="text" {placeholder} maxlength={max} bind:value />
   </div>
 </div>
 
@@ -13,8 +16,6 @@
   .searchbx {
     width: 90%;
     margin: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
   }
   .field {
     height: 3rem;
