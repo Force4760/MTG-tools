@@ -5,6 +5,7 @@
   export let mwidth = "50%";
   export let height = "10rem";
   export let manasymbol = "S";
+  export let classP = "scale";
   function change(variable, delta) {
     let final = variable + delta;
     if (final < 0) {
@@ -19,7 +20,7 @@
 
 <div
   transition:slide={{ duration: 300 }}
-  class="out"
+  class="out {classP}"
   style="width:{width};height:{height};max-width:{mwidth}"
 >
   <ManaS color={manasymbol} />
@@ -70,5 +71,10 @@
     font-size: 4rem;
     transform: translate(-50%, -50%);
     z-index: -1;
+  }
+  @media (max-width: 365px) {
+    .scale {
+      transform: scale(0.9);
+    }
   }
 </style>

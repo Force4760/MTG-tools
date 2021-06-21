@@ -24,7 +24,7 @@
 </script>
 
 <div
-  class="out"
+  class="out scale"
   style="width:{width};height:{height}"
   transition:slide={{ duration: 300 }}
 >
@@ -108,7 +108,7 @@
     {/if}
   </div>
   <div class="text">
-    <Text bind:value={number} placeholder="---" max="4" />
+    <Text bind:value={number} placeholder="---" />
   </div>
 </div>
 
@@ -150,5 +150,10 @@
     font-size: 4rem;
     transform: translate(-50%, -50%);
     stroke: var(--text-main);
+  }
+  @media (max-width: 365px) {
+    .scale {
+      transform: scale(0.9);
+    }
   }
 </style>

@@ -52,7 +52,7 @@
   transition:slide={{ duration: 300 }}
 >
   <p class="name">{values.name}</p>
-  <img src={values.props[index][0]} alt="of the value" />
+  <img src={values.props[index][0]} alt="type of the value" />
   <div class="value">{values.props[index][1]}</div>
   {#if values.monarch}
     <div class=" light monarch" />
@@ -142,7 +142,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.8);
     width: 55%;
     opacity: 0.1;
     z-index: -2;

@@ -20,7 +20,7 @@
 
 <div
   transition:slide={{ duration: 300 }}
-  class="out"
+  class="out scale"
   style="width:{width};height:{height}"
   on:click={handleClick}
 >
@@ -142,5 +142,10 @@
   .out:active {
     box-shadow: inset -3px -3px 6px 3px var(--top-shadow),
       inset 3px 3px 6px 3px var(--bottom-shadow);
+  }
+  @media (max-width: 365px) {
+    .scale {
+      transform: scale(0.9);
+    }
   }
 </style>

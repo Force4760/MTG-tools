@@ -44,10 +44,10 @@
       newPlayer.props.push(["images/e.svg", 0]);
     }
     if (player[3]) {
-      newPlayer.props.push(["images/heart.svg", 0]);
+      newPlayer.props.push(["images/exp.svg", 0]);
     }
     if (player[4]) {
-      newPlayer.props.push(["images/P.svg", 0]);
+      newPlayer.props.push(["images/coin.svg", 0]);
     }
 
     return newPlayer;

@@ -10,7 +10,7 @@
   <Mana manasymbol="R" bind:result={game.mana.R} />
   <Mana manasymbol="G" bind:result={game.mana.G} />
   <Mana manasymbol="C" bind:result={game.mana.C} />
-  <Mana width="50rem" mwidth="85%" bind:result={game.mana.S} />
+  <Mana width="50rem" mwidth="90%" classP="" bind:result={game.mana.S} />
 </div>
 
 <style>

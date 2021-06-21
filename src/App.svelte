@@ -6,7 +6,7 @@
   import Mana from "./pages/manaPage.svelte";
   import Playing from "./pages/Playing.svelte";
   import Search from "./pages/search.svelte";
-  import Footer from "./components/Footer.svelte";
+
   let game = {
     pages: [false, false, false, false, true],
     mana: {
